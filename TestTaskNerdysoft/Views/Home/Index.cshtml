@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home page</title>
+</head>
+<body>
+    <h3>All announcements</h3>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <td>DateTime</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var announcement in ViewBag.Announcement)
+                {
+                    <tr>
+                        <td>@announcement.Name</td>
+                        <td>@announcement.Description</td>
+                        <td>@announcement.DateTime</td>
+                        <td><a href="/Home/Edit/@announcement.Id">Edit</a></td>
+                        <td><a href="/Home/Delete/@announcement.Id">Delete</a></td>
+                        <td><a href="/Home/Show/@announcement.Id">Show details</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <a href="/Home/Create">Create new</a>
+</body>
+</html>

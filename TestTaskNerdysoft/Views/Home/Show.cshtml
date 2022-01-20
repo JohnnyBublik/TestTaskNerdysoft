@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show</title>
+</head>
+<body>
+    <h3>All info about announcement @ViewBag.Announcement.Name</h3>
+    <br>
+
+    <form method="post" action="">
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>@ViewBag.Announcement.Name</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>@ViewBag.Announcement.Description</td>
+                </tr>
+                <tr>
+                    <td>Datetime</td>
+                    <td>@ViewBag.Announcement.DateTime</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Come back" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
