@@ -35,5 +35,31 @@
             </tbody>
         </table>
     </form>
+
+    <h3>Similar announcements</h3>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <td>DateTime</td>
+                <td>&nbsp;</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var announcement in ViewBag.AnnouncementSimilar)
+                {
+                    <tr>
+                        <td>@announcement.Name</td>
+                        <td>@announcement.Description</td>
+                        <td>@announcement.DateTime</td>
+                        <td><a href="/Home/Show/@announcement.Id">Show details</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </body>
 </html>
